@@ -24,7 +24,7 @@ public:
 private:
     static GLRendererContext* mGLRendererContextInstance;
     BaseSample *mCurrentBaseSample;
-    BaseSample *mLastBaseSample;
+    //BaseSample *mLastBaseSample;
     int mScreenWidth;
     int mScreenHeight;
 };

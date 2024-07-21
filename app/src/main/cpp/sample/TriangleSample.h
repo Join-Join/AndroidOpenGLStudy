@@ -6,16 +6,19 @@
 #define OPENGLNDKSTUDY_TRIANGLESAMPLE_H
 
 #include "BaseSample.h"
+#include "../util/GLUtils.h"
+#include "../util/LogUtil.h"
 
-class TriangleSample : public BaseSample{
+class TriangleSample : public BaseSample {
 
 public:
-    TriangleSample();
+    TriangleSample() ;
     virtual ~TriangleSample();
+    virtual void Init();
+    virtual void Draw(int screenWidth, int screenHeight);
+    virtual void Destroy();
 
-    virtual void Destroy() = 0;
-    virtual void Draw(int screenWidth, int screenHeight) = 0;
-    virtual void Init() = 0;
+    //virtual void Destroy() = 0; 是错误的
 };
 
 #endif //OPENGLNDKSTUDY_TRIANGLESAMPLE_H

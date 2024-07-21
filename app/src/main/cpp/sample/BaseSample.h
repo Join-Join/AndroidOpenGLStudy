@@ -13,14 +13,14 @@ class BaseSample {
 
 public:
     BaseSample(){
-        mVertexShader = 0;
-        mFragmentShader = 0;
-        mProgramObj = 0;
+        mVertexShaderHandle = 0;
+        mFragmentShaderHandle = 0;
+        mProgramHandle = 0;
         mSurfaceWidth = 0;
         mSurfaceHeight = 0;
     }
 
-    ~BaseSample(){
+    virtual ~BaseSample(){
 
     }
 
@@ -29,9 +29,9 @@ public:
     virtual void Destroy() = 0;
 
 protected:
-    GLuint mVertexShader;
-    GLuint mFragmentShader;
-    GLuint mProgramObj;
+    GLuint mVertexShaderHandle;
+    GLuint mFragmentShaderHandle;
+    GLuint mProgramHandle;
     int mSurfaceWidth;
     int mSurfaceHeight;
 };

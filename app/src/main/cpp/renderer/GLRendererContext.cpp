@@ -1,16 +1,18 @@
-
-
 #include "GLRendererContext.h"
 #include "../util/LogUtil.h"
+#include "../sample/TriangleSample.h"
 
 GLRendererContext* GLRendererContext::mGLRendererContextInstance = nullptr;
 
 GLRendererContext::GLRendererContext() {
-
+    mCurrentBaseSample = new TriangleSample();
 }
 
 GLRendererContext::~GLRendererContext() {
-
+    if (mCurrentBaseSample){
+        delete mCurrentBaseSample;
+        mCurrentBaseSample = nullptr;
+    }
 }
 
 GLRendererContext *GLRendererContext::GetInstance() {
